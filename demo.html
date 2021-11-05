@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bull Tracker - Demo</title>
     <link rel="icon" href="./app/Assets/up-icon.png">
-        <link rel="stylesheet" href="app//UI/css/mainStructure.css">
-        <link rel="stylesheet" href="app/UI/css/mainStyle.css">
-        <link rel="stylesheet" href="app/UI/css/coinList.css">
-        <link rel="stylesheet" href="app/UI/css/chart.css">
-        <link rel="stylesheet" href="app/UI/css/InsertEditPopup.css">
+    <link rel="stylesheet" href="app//UI/css/mainStructure.css">
+    <link rel="stylesheet" href="app/UI/css/mainStyle.css">
+    <link rel="stylesheet" href="app/UI/css/coinList.css">
+    <link rel="stylesheet" href="app/UI/css/chart.css">
+    <link rel="stylesheet" href="app/UI/css/InsertEditPopup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -51,9 +51,9 @@
             </div>
         </div>
     </div>
-    <div id="mainContainer">    
+    <div id="mainContainer">
         <div id="leftSidePanel">
-            <div id="coinListContainer">               
+            <div id="coinListContainer">
                 <div id="coinLabelsRow" class="coinListRow">
                     <div id="leftSegment" class="coinListRowSegment">
                         <div id="newCoinBtnContainer">
@@ -65,12 +65,12 @@
                     </div>
                     <div id="rightSegment" class="coinListRowSegment">
                         <span class="coinLabel">Holdings</span>
-                    </div>  
+                    </div>
                     <div id="buttonsSegment" class="coinListRowSegment">
                     </div>
                 </div>
 
-                <div  class="coinListRow" id="coinRowPrototype" style="display:none">
+                <div class="coinListRow" id="coinRowPrototype" style="display:none">
                     <div id="leftSegment" class="coinListRowSegment">
                         <div id="upperSegment" class="coinListColumnSegment"></div>
                         <div id="midSegment" class="coinListColumnSegment">
@@ -101,12 +101,19 @@
                     <div id="buttonsSegment" class="coinListRowSegment">
                         <img id="editButton" src="./app/Assets/options.png" alt="">
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
         <div id="rightSidePanel">
             <div id="portfChartContainer">
                 <div id="totalHoldingsUpperDiv">
+                    <div id="dataSettings">
+                        <div id="rightFiller"></div>
+                        <div id="settingsDiv">
+                            <span id="daysRange" onclick="rangeSelect()()"></span>
+                            <span id="currency" onclick="currencySelect()()"></span>
+                        </div>
+                    </div>
                     <div id="totalHoldingsLabel">
                         <span id="totalHoldings"></span>
                     </div>
@@ -119,7 +126,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="app/UI/Javascript/dataSettings.js"></script>
