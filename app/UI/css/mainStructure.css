@@ -1,0 +1,155 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #15121f;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Roboto", sans-serif;
+}
+#mainContainer {
+  width: 1400px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+#leftSidePanel {
+  max-width: 50%;
+  height: 100%;
+  background-color: #15121f;
+  flex: auto 1 1;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#rightSidePanel {
+  max-width: 50%;
+  height: 100%;
+  background-color: #15121f;
+  flex: auto 1 1;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#coinListContainer {
+  max-width: 800px;
+  padding-top: 10px;
+  height: 93%;
+  flex: auto 1 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#portfChartContainer {
+  max-width: 600px;
+  height: 65%;
+  flex: auto 1 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#newCoinBtnContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 1450px) {
+  #mainContainer {
+    width: calc(100vw - 50px);
+    height: 95%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #mainContainer {
+    width: 1100px;
+    height: 90%;
+  }
+
+  #portfChartContainer {
+    max-width: 450px;
+    height: 65%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #mainContainer {
+    width: 1000px;
+    height: 86%;
+  }
+
+  #portfChartContainer {
+    max-width: 400px;
+    height: 65%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  #mainContainer {
+    width: 900px;
+    height: 86%;
+  }
+  #portfChartContainer {
+    max-width: 340px;
+    height: 55%;
+  }
+  #leftSidePanel {
+    max-width: 56%;
+  }
+  #rightSidePanel {
+    max-width: 44%;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  html,
+  body {
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+  #mainContainer {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  #leftSidePanel {
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  #rightSidePanel {
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  #portfChartContainer {
+    max-width: 100%;
+    height: 350px;
+  }
+  #coinListContainer {
+    padding-top: 20px;
+    height: auto;
+  }
+  #newCoinBtnContainer {
+    padding-left: 5px;
+  }
+}

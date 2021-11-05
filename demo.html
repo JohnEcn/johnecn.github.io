@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bull Tracker - Demo</title>
+    <link rel="icon" href="./app/Assets/up-icon.png">
+        <link rel="stylesheet" href="app//UI/css/mainStructure.css">
+        <link rel="stylesheet" href="app/UI/css/mainStyle.css">
+        <link rel="stylesheet" href="app/UI/css/coinList.css">
+        <link rel="stylesheet" href="app/UI/css/chart.css">
+        <link rel="stylesheet" href="app/UI/css/InsertEditPopup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loadingGif"><img src="./app/Assets/Ripple-0.5s-254px.svg" alt=""></div>
+    <div id="fullPageovelay"  onclick="closeUserDataPopup()">
+    </div>
+    <div id='insert-editDataPopup'>
+        <div id="coinData">
+            <div class="coinDataInput">
+                <label for="coinSymbol">Coin Symbol <span id="coinErrorLabel"></span></label>
+                <input id="coinNameSearch" name="coinName" autocomplete="off" type="text" onkeyup="coinSymbolInput()">
+                <div id="dropDownContainer">
+                    <div id="dropDownContent">
+                    </div>
+                </div>                
+            </div>
+            <div class="coinDataInput">
+                <label for="coinHoldings">Holdings</label>
+                <input id="newCoinHoldings" name="coinHoldings" autocomplete="off" type="text">
+            </div>
+            <div class="coinDataInput">
+                <label for="avgCost">Average cost</label>
+                <input id="avgCost" name="avgCost" autocomplete="off" type="number">
+            </div>
+        </div>
+        <div id="addBtn">
+            <div id="imageDiv">
+                <img id="coinImg" src="" alt="">
+                <span id="coinName"></span>
+                <span id="coinId" style="display:none;"></span>
+            </div>
+            <div id="btnDiv">
+                <button id="saveButton" disabled="true " onclick="addNewCoin()">Save</button>
+                <span id="deleteCoinBtn">Delete</span>
+            </div>
+        </div>
+    </div>
+    <div id="mainContainer">    
+        <div id="leftSidePanel">
+            <div id="coinListContainer">               
+                <div id="coinLabelsRow" class="coinListRow">
+                    <div id="leftSegment" class="coinListRowSegment">
+                        <div id="newCoinBtnContainer">
+                            <button id="newCoinBtn" onclick="openUserDataPopup()">Add coin</button>
+                        </div>
+                    </div>
+                    <div id="middleSegment" class="coinListRowSegment">
+                        <span class="coinLabel">Price</span>
+                    </div>
+                    <div id="rightSegment" class="coinListRowSegment">
+                        <span class="coinLabel">Holdings</span>
+                    </div>  
+                    <div id="buttonsSegment" class="coinListRowSegment">
+                    </div>
+                </div>
+
+                <div  class="coinListRow" id="coinRowPrototype" style="display:none">
+                    <div id="leftSegment" class="coinListRowSegment">
+                        <div id="upperSegment" class="coinListColumnSegment"></div>
+                        <div id="midSegment" class="coinListColumnSegment">
+                            <img id="coinIcon" src="" alt="">
+                            <span id="coinNameLabel">Bitcoin</span>
+                        </div>
+                        <div id="bottomSegment" class="coinListColumnSegment">
+                        </div>
+                    </div>
+                    <div id="middleSegment" class="coinListRowSegment">
+                        <div id="upperSegment" class="coinListColumnSegment"></div>
+                        <div id="midSegment" class="coinListColumnSegment">
+                            <span id="coinPriceLabel">$32.238,21</span>
+                        </div>
+                        <div id="bottomSegment" class="coinListColumnSegment">
+                            <span id="percentChange">12.3%</span>
+                        </div>
+                    </div>
+                    <div id="rightSegment" class="coinListRowSegment">
+                        <div id="upperSegment" class="coinListColumnSegment"></div>
+                        <div id="midSegment" class="coinListColumnSegment">
+                            <span id="holdingsPriceLabel">$1201,21</span>
+                        </div>
+                        <div id="bottomSegment" class="coinListColumnSegment">
+                            <span id="coinHoldings">0.05</span>
+                        </div>
+                    </div>
+                    <div id="buttonsSegment" class="coinListRowSegment">
+                        <img id="editButton" src="./app/Assets/options.png" alt="">
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <div id="rightSidePanel">
+            <div id="portfChartContainer">
+                <div id="totalHoldingsUpperDiv">
+                    <div id="totalHoldingsLabel">
+                        <span id="totalHoldings"></span>
+                    </div>
+                    <div id="percentChangesLabel">
+                        <span id="percentChanges"></span>
+                    </div>
+                </div>
+                <div id="chartBottomDiv">
+                    <canvas width="95%" id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app/UI/Javascript/utils.js"></script>
+<script src="app/UI/Javascript/coinList.js"></script>
+<script src="app/UI/Javascript/portfChart.js"></script>
+<script src="app/UI/Javascript/userDataPopup.js"></script>
+<script src="app/Client/utils.js"></script>
+<script src="app/Client/demo/localStorage.js"></script>
+<script src="app/Client/dataEndpoint.js"></script>
+<script src="app/Client/coinData.js"></script>
+<script src="app/Client/app.js"></script>
+<script src="app/Client/demo/demo.js"></script>
+</html>

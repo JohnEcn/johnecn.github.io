@@ -1,0 +1,93 @@
+#coinListContainer {
+  background-color: #191625;
+  border-radius: 35px;
+}
+#portfChartContainer {
+  border-radius: 35px;
+  background: rgb(25, 22, 37);
+  background: linear-gradient(
+    180.14deg,
+    rgba(182, 22, 22, 0) 3.77%,
+    rgb(38, 34, 53) 32.44%,
+    rgb(38, 34, 53) 99.88%
+  );
+}
+#coinLabelsRow {
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 5px;
+}
+#coinLabelsRow:hover {
+  background: #191625;
+  cursor: default;
+}
+.coinListRow {
+  border-bottom: 1px solid #636363;
+  background-color: #191625;
+}
+.coinListRow:hover {
+  background: linear-gradient(
+    270deg,
+    rgba(72, 27, 92, 0.42) 2.22%,
+    rgba(32, 39, 75, 0.63) 82.82%
+  );
+}
+.coinLabel {
+  color: white;
+  font-size: 16px;
+}
+#newCoinBtn {
+  width: 160px;
+  height: 35px;
+  border-radius: 10px;
+  background: linear-gradient(270deg, #b246e4 -34.67%, #657eff 65.33%);
+  color: black;
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  font-size: 20px;
+}
+#loadingGif {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1px;
+  z-index: 98;
+  display: none;
+}
+#loadingGif img {
+  width: 70px;
+  height: 70px;
+}
+#errorMsgPanel {
+  width: 100vw;
+  height: 0vh;
+  position: absolute;
+  top: 0px;
+  z-index: 98;
+  background-color: rgba(190, 87, 87, 0.582);
+  display: none;
+  border-bottom: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+#errorMsg {
+  color: white;
+  font-weight: 700;
+  display: none;
+}
+
+@media screen and (max-width: 1300px) {
+  #newCoinBtn {
+    width: 120px;
+    height: 25px;
+    font-size: 14px;
+  }
+}

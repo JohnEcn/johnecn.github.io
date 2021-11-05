@@ -1,0 +1,68 @@
+const demoPortf = [
+   {
+      "coinName":"Bitcoin",
+      "coinId":"bitcoin",
+      "coinSymbol":"btc",
+      "coinImgUrl":"https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+      "holdings":"0.1"
+   },
+   {
+      "coinName":"Ethereum",
+      "coinId":"ethereum",
+      "coinSymbol":"eth",
+      "coinImgUrl":"https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880",
+      "holdings":"0.9"
+   },
+   {
+      "coinName":"Cardano",
+      "coinId":"cardano",
+      "coinSymbol":"ada",
+      "coinImgUrl":"https://assets.coingecko.com/coins/images/975/large/cardano.png?1547034860",
+      "holdings":"190"
+   },
+   {
+      "coinName":"Tezos",
+      "coinId":"tezos",
+      "coinSymbol":"xtz",
+      "coinImgUrl":"https://assets.coingecko.com/coins/images/976/large/Tezos-logo.png?1547034862",
+      "holdings":"110"
+   },
+   {
+      "coinName":"Monero",
+      "coinId":"monero",
+      "coinSymbol":"xmr",
+      "coinImgUrl":"https://assets.coingecko.com/coins/images/69/large/monero_logo.png?1547033729",
+      "holdings":"4"
+   },
+   {
+      "coinName":"Stellar",
+      "coinId":"stellar",
+      "coinSymbol":"xlm",
+      "coinImgUrl":"https://assets.coingecko.com/coins/images/100/large/Stellar_symbol_black_RGB.png?1552356157",
+      "holdings":"90"
+   },
+   {
+      "coinName":"Chainlink",
+      "coinId":"chainlink",
+      "coinSymbol":"link",
+      "coinImgUrl":"https://assets.coingecko.com/coins/images/877/large/chainlink-new-logo.png?1547034700",
+      "holdings":"10"
+   },
+   {
+      "coinName":"Harmony",
+      "coinId":"harmony",
+      "coinSymbol":"one",
+      "coinImgUrl":"https://assets.coingecko.com/coins/images/4344/large/Y88JAze.png?1565065793",
+      "holdings":"314"
+   }
+]
+function initializeDemo()
+{
+    let data = fetchUserCoins();
+    if(data == "[]")
+    {
+        localStorage.setItem(userCoinsKey,JSON.stringify(demoPortf));
+        loadData(); 
+    }
+}
+initializeDemo();

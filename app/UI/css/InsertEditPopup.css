@@ -1,0 +1,173 @@
+#fullPageovelay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 98;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  display: none;
+}
+#insert-editDataPopup {
+  width: 642px;
+  height: 315px;
+  border-radius: 10px;
+  background-color: #110c1b;
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#coinData,
+#addBtn {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#addBtn {
+  height: 70%;
+}
+.coinDataInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.coinDataInput input {
+  border-radius: 5px;
+  background-color: white;
+  height: 27px;
+  width: 250px;
+  border: 0px;
+}
+.coinDataInput input:focus {
+  border-radius: 3px;
+  outline: none;
+}
+.coinDataInput label {
+  color: white;
+  font-size: 14px;
+}
+#imageDiv {
+  width: 60%;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+#btnDiv {
+  width: 60%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+#coinImg {
+  width: 100px;
+  height: 100px;
+  visibility: hidden;
+}
+#coinName {
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#saveButton {
+  width: 100%;
+  height: 35px;
+  border-radius: 25px;
+  background: linear-gradient(270deg, #b246e4 -34.67%, #657eff 65.33%);
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  font-size: 18px;
+}
+#coinErrorLabel {
+  color: red;
+  font-size: 14px;
+}
+#dropDownContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+#dropDownContent {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.dropDownCoin {
+  width: 100%;
+  height: 35px;
+  background-color: #000000fa;
+  position: relative;
+  border-bottom: 1px solid rgba(45, 48, 63, 0.658);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+.dropDownCoin:hover {
+  background-color: rgb(18, 15, 22);
+}
+.dropDownImg {
+  height: 25px;
+  width: 25px;
+  padding-left: 20px;
+}
+.dropDownName {
+  color: white;
+  font-size: 16px;
+}
+#deleteCoinBtn {
+  margin-top: 10px;
+  color: rgb(105, 0, 0);
+  cursor: pointer;
+  text-decoration: underline;
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  #insert-editDataPopup {
+    width: 80%;
+    height: 60%;
+
+    flex-direction: column;
+  }
+  #coinImg {
+    width: 70px;
+    height: 70px;
+  }
+  #addBtn {
+    width: 80%;
+  }
+  #imageDiv {
+    width: 100%;
+  }
+}
+@media screen and (max-height: 600px) {
+  #insert-editDataPopup {
+    width: 80%;
+    height: 90%;
+  }
+}
