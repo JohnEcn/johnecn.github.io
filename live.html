@@ -1,0 +1,129 @@
+<div id="espaBanner" style="
+  width: 100%;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+  cursor: pointer;" onclick="window.open('http://www.karras.com.gr/images//espa.pdf', '_blank').focus();">
+  <img src="https://www.karras.com.gr/images//banner.jpg" alt="EspaBanner" style="display:block;width:100%; height:100%;">
+</div>
+<style>
+    #accesibilityMenu,#hiddenMenu{z-index:99;position:fixed;left:0;bottom:0;margin:0;background-color:var(--bg-color)}:root{--bg-color:#ffffff;--font:sans-serif}#accesibilityMenu{user-select:none;color:#000;width:225px;height:470px;padding-top:5px;padding-left:0;font-family:var(--font);box-shadow:1px 1px 4px #0000004b;border-right:1px solid #7a7a7a;border-top:1px solid #7a7a7a;transition:.1s}#accesibilityHeader{font-size:20px;font-weight:700;height:12%;width:100%;margin:0;justify-content:center;padding-left:15px}#accesibilityContainer{height:88%;width:100%;display:flex;flex-direction:column;justify-content:space-between}#accesibilityItem{font-size:16px;height:11%;cursor:pointer;padding-left:15px;display:flex;flex-direction:row;justify-content:flex-start;align-items:center}.toggled{background-color:#3f3f3f;color:#fff}#accesibilityItem.toggled:hover{background-color:#2b2b2b;color:#fa0000}#accesibilityItem:hover{color:#1c6ea4}#accesibilityIcon{height:30%;padding-right:4px}#hiddenMenu>#accesibilityContainer,#hiddenMenu>#accesibilityHeader,#hiddenMenu>#hideToolbarIcon,#rbLinks,#rbShadow,#toolbarIcon{display:none}#hideToolbarIcon{background-color:#fff;border-top:1px solid #000;border-right:1px solid #000;position:fixed;left:224px;bottom:0;height:50px;width:50px;cursor:pointer}#hideToolbarIcon:hover{transform:translateX(-10px);transition:.2s;border-top:0}#hiddenMenu{width:80px;height:80px;box-shadow:1px 1px 4px #00000094}#hiddenMenu:hover{width:90px;height:90px;transition:.2s}#hiddenMenu>#toolbarIcon{height:100%;width:100%;display:initial;cursor:pointer}@media only screen and (max-device-width:650px){#accesibilityMenu{width:50vw;height:50vh;padding-top:1vh}#accesibilityItem{font-size:3vw;padding-left:35px;display:flex;flex-direction:row;justify-content:flex-start;align-items:center;line-height:155%}#accesibilityHeader{font-size:4vw;padding-left:35px}#accesibilityIcon{height:40%;padding-right:24px}#hideToolbarIcon{left:50vw;height:10vw;width:10vw}#hiddenMenu{width:15vw;height:15vw}}
+</style>
+<script>
+    function dfsContrast(a) { a.childNodes.forEach(function (a) { dfsContrast(a) }), void 0 != a.style && (a.style.background = "black", a.style.color = "white", "A" == a.nodeName && (a.style.color = "#19ffc6"), "H" == a.nodeName.charAt(0) && (a.style.color = "#2f33ff")) } function contrast(a) { "" == a.className ? (dfsContrast(document.body), a.className = "toggled") : "toggled" == a.className && location.reload() } function dfsFont(a) { a.childNodes.forEach(function (a) { dfsFont(a) }), void 0 != a.style && (a.style.font = "Verdana", a.style.lineHeight = "155%", "A" == a.nodeName && (a.style.fontWeight = "bold"), "H" == a.nodeName.charAt(0) && (a.style.fontWeight = "bolder")) } function fontChange(a) { "" == a.className ? (dfsFont(document.body), a.className = "toggled") : "toggled" == a.className && location.reload() } function biggerFont() { let b = document.getElementsByTagName("body")[0], a = window.getComputedStyle(b, null).getPropertyValue("font-size"); a = parseInt(a.substring(0, a.length - 2)), document.getElementsByTagName("body")[0].style.fontSize = a + 1 + "px" } function smallerFont() { let b = document.getElementsByTagName("body")[0], a = window.getComputedStyle(b, null).getPropertyValue("font-size"); a = parseInt(a.substring(0, a.length - 2)), document.getElementsByTagName("body")[0].style.fontSize = a - 1 + "px" } function toggleAccecibilityMenu() { let a = document.getElementsByClassName("accesibilityToolbar")[0]; "hiddenMenu" == a.id ? a.id = "accesibilityMenu" : "accesibilityMenu" == a.id && (a.id = "hiddenMenu") } function dfsWhitebg(a) { a.childNodes.forEach(function (a) { dfsWhitebg(a) }), void 0 != a.style && (a.style.background = "white", a.style.color = "black") } function whiteBg(a) { "" == a.className ? (dfsWhitebg(document.body), a.className = "toggled") : "toggled" == a.className && location.reload() } function grayscale(a) { "" == a.className ? (document.getElementsByTagName("html")[0].style.filter = "grayscale(1)", a.className = "toggled") : "toggled" == a.className && (document.getElementsByTagName("html")[0].style.filter = "grayscale(0)", a.className = "") } function dfsNegativeContrast(a) { a.childNodes.forEach(function (a) { dfsNegativeContrast(a) }), void 0 != a.style && (a.style.background = "black", a.style.color = "#ff9100", "A" == a.nodeName && (a.style.color = "#fffb00"), "H" == a.nodeName.charAt(0) && (a.style.color = "#ff9100")) } function negativeContrast(a) { "" == a.className ? (dfsNegativeContrast(document.body), a.className = "toggled") : "toggled" == a.className && location.reload() } function underlineLinks(b) { let c = document.getElementsByTagName("a"), d, e, f; "" == b.className ? (d = "underline", e = "yellow", f = "black", b.className = "toggled") : "toggled" == b.className && (d = "initial", e = "initial", f = "initial", b.className = ""); for (let a = 0; a < c.length; a++)c[a].style.textDecoration = d, c[a].style.color = e, c[a].style.background = f } 
+    
+    function addAltText() {
+            let images = document.getElementsByTagName("img");
+            for (let i = 0; i < images.length; i++) {
+                //if (images[i].alt == "") {
+                    let imgPath = images[i].src.split("/");
+                    images[i].alt = imgPath[imgPath.length - 1].split(".")[0];
+                //}
+            }
+        }
+        function addLangAttr() {
+            document.getElementsByTagName('html')[0].lang = "el";
+        }
+        function fixLinksContrast() {
+            let horizNav = document.getElementById('horiznav');
+            let bottomMenu = document.getElementById('bottom-menu');
+            document.getElementById('bottom-topbar').style.background = "#3e3c36";
+            document.getElementById('rocket').style.display = "none";
+            dfsWhiteColorLinks(horizNav)
+            dfsWhiteColorLinks(bottomMenu)
+        }
+        function dfsWhiteColorLinks(elem) {
+            elem.childNodes.forEach(function (a) {
+                dfsWhiteColorLinks(a);
+            });
+            if (elem.style != undefined && elem.nodeName == "A") {
+                elem.style.color = "white";
+                elem.style.fontSize = "14px  ";
+                elem.style.fontWeight = 'bold';
+                elem.style.background = "#3e3c36";
+            }
+        }
+        function dfsNullLinksFix(elem) {
+            elem.childNodes.forEach(function (a) {
+                dfsNullLinksFix(a);
+            });
+            if (elem.nodeName == "A" && elem.href == "https://karras.com.gr/#") {
+                elem.href = "https://karras.com.gr";
+            }
+        }
+        function fixErrors() {
+            addAltText();
+            addLangAttr();
+            fixLinksContrast();
+            dfsNullLinksFix(document.getElementsByTagName("body")[0]);
+        }
+        window.onload = function () {
+                setTimeout(fixErrors, 1);
+            };
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(fixErrors, 250);
+        }, false);
+</script>
+<div id="hiddenMenu" class="accesibilityToolbar">
+    <img id="hideToolbarIcon" src="http://www.karras.com.gr/images//toolbaricon.png" alt="hideMenu" onclick="toggleAccecibilityMenu()">
+    <img id="toolbarIcon" src="http://www.karras.com.gr/images//toolbaricon.png" alt="AccecibilityMenu" onclick="toggleAccecibilityMenu()">
+    <h3 id="accesibilityHeader">Εργαλεία προσβασιμότητας</h3>
+    <div id="accesibilityContainer">
+        <div id="accesibilityItem" onclick="biggerFont()">
+            <img id="accesibilityIcon" src="https://www.karras.com.gr/images/magnifing_glass.png" alt="magnify">
+            <span id="accesibilityText">
+                Αυξήστε το κείμενο
+            </span>
+        </div>
+        <div id="accesibilityItem" onclick="smallerFont()">
+            <img id="accesibilityIcon" src="https://www.karras.com.gr/images/magnifing_glass.png" alt="demagnify">
+            <span id="accesibilityText">
+                Μείωση του κειμένου
+            </span>
+        </div>
+        <div id="accesibilityItem" onclick="grayscale(this)">
+            <img id="accesibilityIcon" src="https://www.karras.com.gr/images/greyscale3-1-300x147.png" alt="gray Grading">
+            <span id="accesibilityText">
+                Κλίμακα του γκρί
+            </span>
+        </div>
+        <div id="accesibilityItem" onclick="contrast(this)">
+            <img id="accesibilityIcon" src="https://www.karras.com.gr/images//contrast.png" alt="contrast">
+            <span id="accesibilityText">
+                Υψηλή αντίθεση
+            </span>
+        </div>
+        <div id="accesibilityItem" onclick="negativeContrast(this)">
+            <img id="accesibilityIcon" src="https://www.karras.com.gr/images/65000.png" alt="negative Contrast">
+            <span id="accesibilityText">
+                Αρνητική αντίθεση
+            </span>
+        </div>
+        <div id="accesibilityItem" onclick="whiteBg(this)">
+            <img id="accesibilityIcon" src="https://www.karras.com.gr/images/img_554608.png" alt="zoom text">
+            <span id="light background">
+                Ελαφρύ φόντο
+            </span>
+        </div>
+        <div id="accesibilityItem" onclick="underlineLinks(this)">
+            <img id="accesibilityIcon" src="https://www.karras.com.gr/images/link-2.png" alt="underline links">
+            <span id="accesibilityText">
+                Υπογράμιση συνδέσμων
+            </span>
+        </div>
+        <div id="accesibilityItem" onclick="fontChange(this)">
+            <img id="accesibilityIcon" src="https://www.karras.com.gr/images//a-icon.png" alt="readable font">
+            <span id="accesibilityText">
+                Ευανάγνωστη γραμματοσειρά
+            </span>
+        </div>
+        <div id="accesibilityItem" onclick="location.reload()">
+            <img id="accesibilityIcon" src="https://www.karras.com.gr/images/reset.png" alt="reset">
+            <span id="accesibilityText">
+                Reset
+            </span>
+        </div>
+    </div>
+</div>  
